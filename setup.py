@@ -9,8 +9,10 @@ setup(
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
 
+    python_requires='>=3.10',
     install_requires=[
         'click',
+        'numpy>2.0',
         'motmetrics>=1.2',
         'shapely',
         'tqdm',
