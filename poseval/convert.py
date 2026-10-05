@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 """Convert between COCO and PoseTrack2017 format."""
-from __future__ import print_function
-
 import json
 import logging
 import os
