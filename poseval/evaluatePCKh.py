@@ -30,8 +30,8 @@ def computeDist(gtFrames,prFrames):
                         idxGT = pointsGT[pidx]["id"][0]
                         p = eval_helpers.getPointGTbyID(pointsPr,idxGT)
                         if (len(p) > 0 and
-                            isinstance(p["x"][0], (int, float)) and
-                            isinstance(p["y"][0], (int, float))):
+                            isinstance(p["x"][0], (int, float, np.number)) and
+                            isinstance(p["y"][0], (int, float, np.number))):
                             pointPr = [p["x"][0],p["y"][0]]
                             # compute distance between GT and prediction
                             d = np.linalg.norm(np.subtract(pointGT,pointPr))
