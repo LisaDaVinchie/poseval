@@ -19,7 +19,7 @@ pip install -e .  # install the local package ('.') in editable mode ('-e')
 
 Changes:
 
-* Python 3
+* Python >= 3.10, numpy > 2.0
 * uses latest `motmetrics` from PyPI (much(!!!) faster); removed git submodule py-motmetrics
 
 Test command with small test data:
@@ -47,7 +47,8 @@ This README provides instructions how to evaluate your method's predictions on [
 
 ## Prerequisites
 
-- numpy>=1.12.1
+- python>=3.10
+- numpy>2.0
 - pandas>=0.19.2
 - scipy>=0.19.0
 - tqdm>=4.24.0
