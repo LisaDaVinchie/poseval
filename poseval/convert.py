@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import os.path as path
+import shutil
 
 import click
 import numpy as np
@@ -597,7 +598,7 @@ def cli(in_fp, out_fp="converted"):
             json.dump(converted_json, outf, default=json_default)
     if unzip_dir:
         LOGGER.debug("Deleting temporary directory...")
-        os.unlink(unzip_dir)
+        shutil.rmtree(unzip_dir)
     LOGGER.info("Done.")
 
 def convert_videos(track_data):
